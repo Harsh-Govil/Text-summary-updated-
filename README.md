@@ -1,2 +1,15 @@
-# Text-summary-updated-
-5 parts to it... data ingestion, data validation, model training ,model evaluation and data transformation. Both .py and .ipnb files created and end to end text summary project made. Enjoyed the process
+## "End to end Text summary"
+
+## workflows
+
+1. Update config.yaml
+2. Update params.yaml
+3. Update entity
+4. Update the configuration manager in src config
+5. update the components
+6. update the pipeline
+7. update teh main.py
+8. update the app.py
+
+
+

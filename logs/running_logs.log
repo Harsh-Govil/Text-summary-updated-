@@ -1,0 +1,118 @@
+[2024-07-14 13:42:53,623: INFO: main: Welcome to our custom logging]
+[2024-07-16 10:09:27,961: INFO: main: Welcome to our custom logging]
+[2024-07-17 08:34:46,048: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-17 08:34:46,049: ERROR: main: Error loading YAML file: mapping values are not allowed here
+  in "config\config.yaml", line 3, column 15]
+Traceback (most recent call last):
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\utils\common.py", line 26, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\composer.py", line 58, in compose_document
+    self.get_event()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\parser.py", line 118, in get_event
+    self.current_event = self.state()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\parser.py", line 193, in parse_document_end
+    token = self.peek_token()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\scanner.py", line 129, in peek_token
+    self.fetch_more_tokens()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\yaml\scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "config\config.yaml", line 3, column 15
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\pipeline\stage_01_data_ingestion.py", line 11, in main
+    config = ConfigurationManager()
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\config\configuration.py", line 8, in __init__
+    self.config = read_yaml(config_filepath)
+  File "C:\Users\Harsh\anaconda3\envs\textS\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "d:\text-summary\text-summary\text-summary\src\textSummary\utils\common.py", line 34, in read_yaml
+    raise ValueError(f"Error loading YAML file: {e}") from e
+ValueError: Error loading YAML file: mapping values are not allowed here
+  in "config\config.yaml", line 3, column 15
+[2024-07-17 09:42:30,889: INFO: config: PyTorch version 2.3.1 available.]
+[2024-08-26 12:02:46,434: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-26 12:02:59,165: INFO: config: PyTorch version 1.12.1 available.]
+[2024-08-26 12:02:59,186: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-08-26 12:04:55,997: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 12:04:56,162: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 12:04:56,206: INFO: common: created directory at: artifacts]
+[2024-08-26 12:07:33,833: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 12:07:33,836: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 12:07:33,838: INFO: common: created directory at: artifacts]
+[2024-08-26 12:07:33,905: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-26 12:08:25,581: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 12:08:25,586: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 12:08:25,590: INFO: common: created directory at: artifacts]
+[2024-08-26 12:08:26,008: INFO: common: created directory at: artifacts/data_validation]
+[2024-08-26 12:09:15,998: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 12:09:16,002: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 12:09:16,005: INFO: common: created directory at: artifacts]
+[2024-08-26 12:09:16,007: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-26 19:07:03,515: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 19:07:03,670: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 19:07:03,694: INFO: common: created directory at: artifacts]
+[2024-08-26 19:07:03,697: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-26 19:07:24,698: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 19:07:24,701: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 19:07:24,703: INFO: common: created directory at: artifacts]
+[2024-08-26 19:07:24,705: INFO: common: created directory at: artifacts/data_validation]
+[2024-08-26 19:09:02,092: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-26 19:09:13,254: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-26 19:09:17,312: INFO: config: PyTorch version 1.12.1 available.]
+[2024-08-26 19:09:17,312: INFO: config: PyTorch version 1.12.1 available.]
+[2024-08-26 19:09:17,312: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-08-26 19:09:23,967: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 19:09:23,967: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 19:09:23,979: INFO: common: created directory at: artifacts]
+[2024-08-26 21:23:35,306: WARNING: module_wrapper: From c:\Users\Harsh\AppData\Local\anaconda3\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-08-26 21:23:40,665: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-26 21:24:06,509: INFO: config: PyTorch version 1.12.1 available.]
+[2024-08-26 21:24:06,525: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-08-26 21:26:53,392: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-26 21:26:53,392: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-26 21:26:53,408: INFO: common: created directory at: artifacts]
+[2024-08-26 22:32:27,807: WARNING: module_wrapper: From C:\Users\Harsh\AppData\Local\anaconda3\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-08-26 22:32:34,645: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-26 22:33:17,063: INFO: server: Started server process [15400]]
+[2024-08-26 22:33:17,063: INFO: on: Waiting for application startup.]
+[2024-08-26 22:33:17,094: INFO: on: Application startup complete.]
+[2024-08-26 22:33:17,098: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-08-27 16:38:13,629: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-27 16:38:24,499: INFO: config: PyTorch version 1.12.1 available.]
+[2024-08-27 16:38:24,499: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-08-27 16:38:31,904: INFO: common: yaml file: D:\Text-summary\Text-summary\Text-summary\config\config.yaml loaded successfully]
+[2024-08-27 16:38:31,904: INFO: common: yaml file: D:\Text-summary\Text-summary\Text-summary\params.yaml loaded successfully]
+[2024-08-27 16:38:31,904: INFO: common: created directory at: artifacts]
+[2024-08-27 16:38:31,920: INFO: common: created directory at: artifacts/data_transformation]
+[2024-08-27 16:41:16,589: WARNING: module_wrapper: From c:\Users\Harsh\AppData\Local\anaconda3\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-08-27 16:41:17,578: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-27 16:41:43,561: INFO: config: PyTorch version 1.12.1 available.]
+[2024-08-27 16:41:43,567: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-08-27 16:41:44,214: INFO: common: yaml file: D:\Text-summary\Text-summary\Text-summary\config\config.yaml loaded successfully]
+[2024-08-27 16:41:44,221: INFO: common: yaml file: D:\Text-summary\Text-summary\Text-summary\params.yaml loaded successfully]
+[2024-08-27 16:41:44,222: INFO: common: created directory at: artifacts]
+[2024-08-27 16:41:44,227: INFO: common: created directory at: artifacts/model_training]
+[2024-08-27 18:20:55,207: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-08-27 18:21:06,523: INFO: config: PyTorch version 1.12.1 available.]
+[2024-08-27 18:21:06,549: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-08-27 18:21:12,977: INFO: common: yaml file: D:\Text-summary\Text-summary\Text-summary\config\config.yaml loaded successfully]
+[2024-08-27 18:21:13,165: INFO: common: yaml file: D:\Text-summary\Text-summary\Text-summary\params.yaml loaded successfully]
+[2024-08-27 18:21:13,180: INFO: common: created directory at: artifacts]
